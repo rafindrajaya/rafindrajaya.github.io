@@ -6,5 +6,5 @@ skills:
 - Python
 - CoolProp
 - Thermodynamics
-main-image: /project.webp 
+main-image: /Schematic Single Flash.png
 ---
