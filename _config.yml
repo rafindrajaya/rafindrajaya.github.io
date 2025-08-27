@@ -7,17 +7,19 @@
 
 # Main Page Setup
 
-title: John Doe's Portfolio # This is what shows up in the tab of the browser
+title: Rafi Indrajaya's Portfolio # This is what shows up in the tab of the browser
 
 
 
 # Hero Section
-name: John Doe
-headline: headline message
+name: Rafi Indrajaya
+headline: Clean Energy System Engineer
 description: >- # dont remove this line. this will ignore all new lines until the next section
-  Write an awesome intro and discuss your highlights and qualification. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+Hello there, welcome to my porfolio page!
+I’m a master’s student in the Erasmus Mundus DENSYS program, specializing in clean energy, hydrogen technologies, and sustainable power systems. 
+With international experience across transportation and power generation, I combine technical expertise in renewable integration with strong 
+analytical skills in Python, SQL, and energy modeling. My journey spans fuel cells, geothermal systems, and Power-to-Hydrogen solutions
+— all driven by my passion for creating innovative, sustainable energy future.
 
 # Place your profile image in /assets/images/profile-image/folder and edit the file name
 profile_image: ./assets/images/profile-image/avatar.jpeg
@@ -31,9 +33,9 @@ resume-url: https://drive.google.com/file/d/13Z3duVzh-gguPU5r03oJVEE6rV9rd3DS/vi
 # Set up external links - this will show up as small icons next to your name.
 
 external-links:    # input only your own url slug. The icons with missing entries will not appear.
-  linkedin: test    # https://www.linkedin.com/in/{your url slug} 
-  github: leea12    # https://github.com/{your url slug} 
-  stackoverflow: test      # https://stackoverflow.com/users/{your url slug}
+  linkedin: www.linkedin.com/in/rafi-indrajaya    # https://www.linkedin.com/in/{your url slug} 
+  github:     # https://github.com/{your url slug} 
+  stackoverflow:       # https://stackoverflow.com/users/{your url slug}
   medium:            # https://medium.com/@{your url slug} 
   x-twitter:   # https://x.com/{your url slug} 
   threads:            # https://threads.net/@{your url slug} 
@@ -45,50 +47,47 @@ external-links:    # input only your own url slug. The icons with missing entrie
 
 # Skills Section - Add the list of your Skills by categories/tools. The indentation for each level needs to be precise. 
 skills:
-  - category: 3D Modeling
+  - category: Programming Languages
     tools:
-    - Onshape
-    - Solidworks
-    - Creo
-    - Fusion 360 (Autodesk)
-    - Blender (for complex shapes or animations)
-    - Siemens NX
-    - Inventor (Autodesk)
-    - CATIA (Dassault Systèmes)
-  - category: Prototyping
+    - Python
+    - SQL
+    - R
+    - MATLAB
+  - category: Energy Systems Tools
     tools:
-    - SLA
-    - CNC
-    - FDM
-    - SLS
-    - DMLS
-    - PolyJet Printing
-    - Vacuum Casting
-    - Laser Cutting
-    - Water Jet Cutting
-    - Arduino / Raspberry Pi
-    - Breadboarding for circuit testing
-  - category: Design Standards / Practices
+    - HOMER Pro
+    - Simulink
+    - OpenModelica
+    - CoolProp
+  - category: Data Analysis & Visualization
     tools:
-    - GD&T ASME Y14
-    - ISO fits and tolerances
-    - PLM (PTC Windchill / Arena)   
-  - category: PCB Design
+    - Tableau
+    - Power BI
+    - Pandas
+    - JSON
+    - Microsoft Office Suite
+  - category: Energy Engineering Expertise
     tools:
-    - Altium Designer
-    - Altium
-    - Eagle 
-    - KiCad
-  - category: Problem Solving / Risk Management
+    - Energy Modelling
+    - Energy Analysis
+    - Hydrogen Production and Utilization
+    - Geothermal
+    - Power-To-X
+    - Solar PV Systems
+    - Wind Power
+    - Carbob Capture, Utilization, and Storage (CCUS)
+    - Life Cycle Analysis (LCA)  
+  - category: Languages
     tools:
-    - Root Cause Analysis (e.g., 5 Whys, Fishbone Diagram)
-    - DFMEA / PFMEA 
-    - Six Sigma methodologies
-    - Shain Red-X
+    - Indonesian (Native)
+    - English (C1)
+    - German (B2)
+    - Japanese (N3)
+    - France (A2)
 
 
 # Contact Form Setup. Setup an account and copy over the key. When someone fills out the form, it will be received in your email.
-formspree-key:   https://formspree.io/f/{8-digit key}
+formspree-key:   https://formspree.io/f/mqadkooo
 
 
 
