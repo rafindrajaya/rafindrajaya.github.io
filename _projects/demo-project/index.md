@@ -51,14 +51,17 @@ main-image: /diesel-pv-bat-topology Large.jpeg
 # Key Assumptions
 ## Load data: 
 Simplified one year of demand, temperature, and irradiance (288 timesteps = 12 months × 24 hours). One month is represented by load profile of one day of that particular month for simplicity.
+
 ## PV system: 
 - Standard test condition parameters, irradiance and temperature corrections, conversion efficiency losses.
 -	Battery: Defined by capacity per cell, SOC operating window (20%–90%).
 -	Charging/discharging efficiencies split for realism.
 -	Simple cycle aging approximation.
+  
 ## Diesel generators:
 1.	500 kW per unit.
 2.	Includes efficiency, fuel cost per liter, and O&M.
+   
 ## Economic assumptions:
 1.	CAPEX per kW PV, per kWh battery, per genset.
 2.	O&M cost fractions over 25-year lifetime.
