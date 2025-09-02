@@ -9,6 +9,7 @@ skills:
 main-image: /Schematic Single Flash.png
 ---
 
+[Access Full Report](https://drive.google.com/file/d/1_0MxYZgvV-AR0ko0zGHC9BETNRGnZ1Nb/view)
 # Objective
 - Assess the impact of geothermal power development in Datun on Taiwan's transition to net-zero by 2050
 - Model two types of geothermal plants to estimate net power output and CO2 emissions reduction.
