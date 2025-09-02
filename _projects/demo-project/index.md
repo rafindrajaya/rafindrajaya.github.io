@@ -98,9 +98,9 @@ You can put in multiple entries. All images will be at a fixed height in the sam
 -->
 
 ### Embeed images
-{% include image-gallery.html images="{_projects/demo-project/diesel-pv-bat-topology Large.jpeg}, {_projects/demo-project/loadprofileoptimal.jpg}" height="400"%}
+{% include image-gallery.html images="{/diesel-pv-bat-topology Large.jpeg}, {/loadprofileoptimal.jpg}" height="400"%}
 
-{% include image-gallery.html images="{_projects/demo-project/resultgraphoptimal.jpg}" height="400"%}
+{% include image-gallery.html images="{/resultgraphoptimal.jpg}" height="400"%}
 
 
 ## Embedding youtube video
