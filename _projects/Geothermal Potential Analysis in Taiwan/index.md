@@ -6,7 +6,7 @@ skills:
 - Python
 - CoolProp
 - Thermodynamics
-main-image: /Schematic Single Flash.png
+main-image: /ssf.png
 ---
 
 [Access Full Report](https://drive.google.com/file/d/1_0MxYZgvV-AR0ko0zGHC9BETNRGnZ1Nb/view)
@@ -44,10 +44,10 @@ main-image: /Schematic Single Flash.png
 # Figures and Visualization
 ### Schematic of the Single Flash Geothermal Power Plant System
 <br>
-{% include image-gallery.html images="/Schematic Single Flash.png" height="400"%}
+{% include image-gallery.html images="/ssf.png" height="400"%}
 <br>
 ### Schematic of the Binary Cycle Geothermal Power Plant System
-{% include image-gallery.html images="/schematic-binarycycle.jpeg" height="400" %}
+{% include image-gallery.html images="/sb.jpeg" height="400" %}
 <br>
 # Python Code Single Flash Geothermal Plant Model
 ### Thermodynamic Points Modelling
