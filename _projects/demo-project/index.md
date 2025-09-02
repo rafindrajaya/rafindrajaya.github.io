@@ -18,26 +18,30 @@ main-image: /diesel-pv-bat-topology Large.jpeg
 
 ---
 # Logic of the Code 
-<br>
-
 ## Input Processing
 -	Load, irradiance, and temperature are read from CSV.
 -	Converted into consistent units (W, Wh, °C).
+
 ## System Parameters
 -	Define PV, battery, diesel, and cost parameters.
 -	Establish GA decision vector: [Npv, Ncell, Ndiesel, SOC_ini].
+  
 ## Optimization Setup
 -	Objective = CAPEX + aggregated O&M + lifetime fuel cost + penalty for unmet load.
 -	Constraints = SOC bounds, no excessive unmet demand, diesel not exceeding nameplate.
+  
 ## Dispatch Simulation (per timestep)
 -	Surplus case: PV → charge battery (respecting SOC & efficiency) → curtail excess.
 -	Deficit case: Battery discharges → if still short, diesel supplies → if still short, unmet load recorded.
+  
 ## Genetic Algorithm
 -	GA searches for the cost-optimal mix of PV panels, battery cells, and diesel gensets.
 -	Integer constraints ensure physical realism (whole panels, whole gensets).
+  
 ## Post-Optimization Simulation
 -	Runs the system with the optimal configuration.
 -	Generates time-series of SOC, power flows, diesel use, and unmet load.
+  
 ## Visualization
 -	Multi-panel plots show:
 -	Load vs PV vs Diesel.
