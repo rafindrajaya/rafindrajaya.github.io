@@ -98,6 +98,7 @@ You can put in multiple entries. All images will be at a fixed height in the sam
 -->
 
 ## Visualization of Results
+<br>
 ### Topology of the system
 {% include image-gallery.html images="/diesel-pv-bat-topology Large.jpeg" height="400"%}
 <br>
@@ -555,5 +556,5 @@ console.log(x);
 | Row 2, Col 1 | Row 2, Col 2 |
 
 make sure to leave aline betwen the table and the header
-
+-->
 
