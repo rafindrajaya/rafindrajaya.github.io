@@ -26,6 +26,9 @@ main-image: /Schematic Single Flash.png
 - Grid connection assumed feasible due to proximity to Taipei.
 
 # Results
+
+<br>
+
 ## Well E-201 (Single-flash, >260 degree celcius):
 - Net output: **197,088 MWh/year**
 - CO2 avoided is equivalent to **194,000 t/year** (assuming coal displacement)
@@ -35,6 +38,8 @@ main-image: /Schematic Single Flash.png
 ## Well GT-19 (Binary Rankine with Isopentane):
 - Net output: **74.61 GWh/year**
 - CO2 avoided is equivalent to **61,180 t/year**
+
+<br>
 
 # Insights & Significance
 - Datun geothermal resources could replace coal, oil, and gas plants with a stable renewable baseload.
