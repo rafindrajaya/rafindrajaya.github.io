@@ -43,7 +43,7 @@ main-image: /Schematic Single Flash.png
 
 # Figures and Visualization
 ### Schematic of the Single Flash Geothermal Power Plant System
-{% include image-gallery.html images="/Schematic Single Flash.png" height="400" %}
+{% include image-gallery.html images="/Schematic Single Flash.png" height="400"%}
 
 <br>
 
