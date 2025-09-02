@@ -19,68 +19,68 @@ main-image: /project2.jpg
 ---
 # Logic of the Code 
 ## 1. Input Processing
-	•	Load, irradiance, and temperature are read from CSV.
-	•	Converted into consistent units (W, Wh, °C).
-## 2.	System Parameters
-	•	Define PV, battery, diesel, and cost parameters.
-	•	Establish GA decision vector: [Npv, Ncell, Ndiesel, SOC_ini].
+•	Load, irradiance, and temperature are read from CSV.
+•	Converted into consistent units (W, Wh, °C).
+## 2. System Parameters
+•	Define PV, battery, diesel, and cost parameters.
+•	Establish GA decision vector: [Npv, Ncell, Ndiesel, SOC_ini].
 ## 3.	Optimization Setup
-	•	Objective = CAPEX + aggregated O&M + lifetime fuel cost + penalty for unmet load.
-	•	Constraints = SOC bounds, no excessive unmet demand, diesel not exceeding nameplate.
+•	Objective = CAPEX + aggregated O&M + lifetime fuel cost + penalty for unmet load.
+•	Constraints = SOC bounds, no excessive unmet demand, diesel not exceeding nameplate.
 ## 4.	Dispatch Simulation (per timestep)
-	•	Surplus case: PV → charge battery (respecting SOC & efficiency) → curtail excess.
-	•	Deficit case: Battery discharges → if still short, diesel supplies → if still short, unmet load recorded.
+•	Surplus case: PV → charge battery (respecting SOC & efficiency) → curtail excess.
+•	Deficit case: Battery discharges → if still short, diesel supplies → if still short, unmet load recorded.
 ## 5.	Genetic Algorithm
-	•	GA searches for the cost-optimal mix of PV panels, battery cells, and diesel gensets.
-	•	Integer constraints ensure physical realism (whole panels, whole gensets).
+•	GA searches for the cost-optimal mix of PV panels, battery cells, and diesel gensets.
+•	Integer constraints ensure physical realism (whole panels, whole gensets).
 ## 6.	Post-Optimization Simulation
-	•	Runs the system with the optimal configuration.
-	•	Generates time-series of SOC, power flows, diesel use, and unmet load.
+•	Runs the system with the optimal configuration.
+•	Generates time-series of SOC, power flows, diesel use, and unmet load.
 ## 7.	Visualization
-	•	Multi-panel plots show:
-	•	Load vs PV vs Diesel.
-	•	Battery charge/discharge cycles and curtailment.
-	•	SOC trajectory.
-	•	Diesel share of demand.
-	•	(Optional) unmet load profile and percentages.
+•	Multi-panel plots show:
+•	Load vs PV vs Diesel.
+•	Battery charge/discharge cycles and curtailment.
+•	SOC trajectory.
+•	Diesel share of demand.
+•	(Optional) unmet load profile and percentages.
 
 # Key Assumptions
 ## Load data: 
-    Simplified one year of demand, temperature, and irradiance (288 timesteps = 12 months × 24 hours). One month is represented by load profile of one day of that particular month for simplicity.
+Simplified one year of demand, temperature, and irradiance (288 timesteps = 12 months × 24 hours). One month is represented by load profile of one day of that particular month for simplicity.
 ## PV system: 
-    Standard test condition parameters, irradiance and temperature corrections, conversion efficiency losses.
-    	•	Battery: Defined by capacity per cell, SOC operating window (20%–90%).
-    	•	Charging/discharging efficiencies split for realism.
-    	•	Simple cycle aging approximation.
-    	•	Diesel generators:
-    	•	500 kW per unit.
-    	•	Includes efficiency, fuel cost per liter, and O&M.
-    	•	Economic assumptions:
-    	•	CAPEX per kW PV, per kWh battery, per genset.
-    	•	O&M cost fractions over 25-year lifetime.
-    	•	Fuel costs accumulated over system lifetime.
-    	•	Penalty: Unmet load is penalized in the objective (instead of strictly forbidden) to balance cost vs. reliability.
+Standard test condition parameters, irradiance and temperature corrections, conversion efficiency losses.
+•	Battery: Defined by capacity per cell, SOC operating window (20%–90%).
+•	Charging/discharging efficiencies split for realism.
+•	Simple cycle aging approximation.
+•	Diesel generators:
+•	500 kW per unit.
+•	Includes efficiency, fuel cost per liter, and O&M.
+•	Economic assumptions:
+•	CAPEX per kW PV, per kWh battery, per genset.
+•	O&M cost fractions over 25-year lifetime.
+•	Fuel costs accumulated over system lifetime.
+•	Penalty: Unmet load is penalized in the objective (instead of strictly forbidden) to balance cost vs. reliability.
  
 # Results & Insights 
 ## The optimizer identified a cost-optimal hybrid system with the following configuration:
-	•	6,270 PV panels supplying the bulk of annual energy demand.
-	•	1 battery cell (minimal storage), indicating that in this scenario additional storage was not cost-effective compared to diesel backup.
-	•	5 diesel units (≈2.5 MW total capacity) serving as reliability support during deficits.
-	•	Initial SOC set at 24%, close to the lower operational limit.
-	•	Objective cost ≈ $13.8 million (simplified lifetime CAPEX + O&M + fuel).
+•	**6,270 PV panels** supplying the bulk of annual energy demand.
+•	**1 battery cell (minimal storage)**, indicating that in this scenario additional storage was not cost-effective compared to diesel backup.
+•	**5 diesel units (≈2.5 MW total capacity)** serving as reliability support during deficits.
+•	Initial SOC set at 24%, close to the lower operational limit.
+•	Objective cost ≈ **$13.8 million (simplified lifetime CAPEX + O&M + fuel)**.
 
 ## System performance:
-	•	Annual demand coverage: >99.9%.
-	•	Unmet load: 270 MWh, only 0.05% of annual consumption—demonstrating that the optimizer balanced cost and reliability effectively.
-	•	Role of components:
-	•	PV provided the lowest-cost energy.
-	•	Diesel units were favored over large battery banks for backup due to lower cost per unit of reliability in this setup.
-	•	Minimal battery sizing shows that storage value depends strongly on relative costs, penalty weighting for unmet load, and system constraints.
+•	Annual demand coverage: **>99.9%**.
+•	Unmet load: 270 MWh, only 0.05% of annual consumption—demonstrating that the optimizer balanced cost and reliability effectively.
+•	Role of components:
+- PV provided the lowest-cost energy.
+- Diesel units were favored over large battery banks for backup due to lower cost per unit of reliability in this setup.
+- Minimal battery sizing shows that storage value depends strongly on relative costs, penalty weighting for unmet load, and system constraints.
 
 ## Insights:
-	•	The optimizer tends to minimize expensive storage investment if diesel fuel and O&M costs remain competitive relative to battery CAPEX.
-	•	A very low unmet load percentage confirms the system can operate with high reliability while keeping costs down.
-	•	The results highlight the trade-offs between renewables, storage, and fossil backup, a central challenge in designing hybrid microgrids.
+•	The optimizer tends to minimize expensive storage investment if diesel fuel and O&M costs remain competitive relative to battery CAPEX.
+•	A very low unmet load percentage confirms the system can operate with high reliability while keeping costs down.
+•	The results highlight the trade-offs between renewables, storage, and fossil backup, a central challenge in designing hybrid microgrids.
 
 
 ## Embedding images 
