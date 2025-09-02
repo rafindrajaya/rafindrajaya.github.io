@@ -25,7 +25,7 @@ main-image: /Schematic Single Flash.png
 - Grid connection assumed feasible due to proximity to Taipei.
 
 # Results
-## Well E-201 (Single-flash, >260 degree celcius
+## Well E-201 (Single-flash, >260 degree celcius):
 - Net output: **197,088 MWh/year**
 - CO2 avoided is equivalent to **194,000 t/year** (assuming coal displacement)
 <br>
