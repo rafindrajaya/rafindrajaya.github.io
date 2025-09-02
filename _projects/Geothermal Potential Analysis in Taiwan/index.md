@@ -43,7 +43,7 @@ main-image: /ssf.png
 
 # Figures and Visualization
 ### Schematic of the Single Flash Geothermal Power Plant System
-{% include image-gallery.html images="/schematic single flash.jpeg" height="400"%}
+{% include image-gallery.html images="_projects/Geothermal Potential Analysis in Taiwan/schematicsingleflash.jpeg" height="400"%}
 <br>
 ### Schematic of the Binary Cycle Geothermal Power Plant System
 {% include image-gallery.html images="/schematicbinary.jpeg" height="400" %}
