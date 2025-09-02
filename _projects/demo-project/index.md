@@ -59,14 +59,14 @@ Simplified one year of demand, temperature, and irradiance (288 timesteps = 12 m
 -	Simple cycle aging approximation.
   
 ## Diesel generators:
-1.	500 kW per unit.
-2.	Includes efficiency, fuel cost per liter, and O&M.
+- 500 kW per unit.
+- Includes efficiency, fuel cost per liter, and O&M.
    
 ## Economic assumptions:
-1.	CAPEX per kW PV, per kWh battery, per genset.
-2.	O&M cost fractions over 25-year lifetime.
-3.	Fuel costs accumulated over system lifetime.
-4.	Penalty: Unmet load is penalized in the objective (instead of strictly forbidden) to balance cost vs. reliability.
+- CAPEX per kW PV, per kWh battery, per genset.
+- O&M cost fractions over 25-year lifetime.
+- Fuel costs accumulated over system lifetime.
+- Penalty: Unmet load is penalized in the objective (instead of strictly forbidden) to balance cost vs. reliability.
  
 # Results & Insights 
 ## The optimizer identified a cost-optimal hybrid system with the following configuration:
@@ -79,10 +79,11 @@ Simplified one year of demand, temperature, and irradiance (288 timesteps = 12 m
 ## System performance:
 -	Annual demand coverage: **>99.9%**.
 -	Unmet load: 270 MWh, only 0.05% of annual consumption—demonstrating that the optimizer balanced cost and reliability effectively.
-- Role of components:
-1. PV provided the lowest-cost energy.
-2. Diesel units were favored over large battery banks for backup due to lower cost per unit of reliability in this setup.
-3. Minimal battery sizing shows that storage value depends strongly on relative costs, penalty weighting for unmet load, and system constraints.
+
+## Role of components:
+- PV provided the lowest-cost energy.
+- Diesel units were favored over large battery banks for backup due to lower cost per unit of reliability in this setup.
+- Minimal battery sizing shows that storage value depends strongly on relative costs, penalty weighting for unmet load, and system constraints.
 
 ## Insights:
 -	The optimizer tends to minimize expensive storage investment if diesel fuel and O&M costs remain competitive relative to battery CAPEX.
