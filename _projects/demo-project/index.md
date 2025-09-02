@@ -83,16 +83,23 @@ Simplified one year of demand, temperature, and irradiance (288 timesteps = 12 m
 -	A very low unmet load percentage confirms the system can operate with high reliability while keeping costs down.
 -	The results highlight the trade-offs between renewables, storage, and fossil backup, a central challenge in designing hybrid microgrids.
 
+<!--
+## Embedding images
+### External images
+{% include image-gallery.html images="https://live.staticflickr.com/..." height="400" %}
+-->
 
+<!--
 ## Embedding images 
 ### External images
 {% include image-gallery.html images="https://live.staticflickr.com/65535/52821641477_d397e56bc4_k.jpg, https://live.staticflickr.com/65535/52822650673_f074b20d90_k.jpg" height="400"%}
 <span style="font-size: 10px">"Starship Test Flight Mission" from https://www.flickr.com/photos/spacex/52821641477/</span>  
 You can put in multiple entries. All images will be at a fixed height in the same row. With smaller window, they will switch to columns.  
+-->
 
 ### Embeed images
-{% include image-gallery.html images="project2.jpg" height="400" %} 
-place the images in project folder/images then update the file path.   
+{% loadprofileoptimal.jpg" height="400" %} 
+Load profile of the PV-Battery-Diesel topology 
 
 
 ## Embedding youtube video
@@ -105,6 +112,7 @@ you can also set up custom size by specifying the width (the aspect ratio has be
 
 The width of the video below. Regardless of initial width, all the videos is responsive and will fit within the smaller screen.
 {% include youtube-video.html id="tGCdLEQzde0" autoplay = "false" width= "900px" %}  
+-->
 
 <br>
 
