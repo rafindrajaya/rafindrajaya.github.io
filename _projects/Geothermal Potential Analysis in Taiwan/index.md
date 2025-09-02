@@ -43,13 +43,12 @@ main-image: /Schematic Single Flash.png
 
 # Figures and Visualization
 ### Schematic of the Single Flash Geothermal Power Plant System
-{% include image-gallery.html images="/Schematic Single Flash.png" height="400"%}
-
 <br>
-
+{% include image-gallery.html images="/Schematic Single Flash.png" height="400"%}
+<br>
 ### Schematic of the Binary Cycle Geothermal Power Plant System
 {% include image-gallery.html images="/schematic-binarycycle.jpeg" height="400" %}
-
+<br>
 # Python Code Single Flash Geothermal Plant Model
 ### Thermodynamic Points Modelling
 ```python
