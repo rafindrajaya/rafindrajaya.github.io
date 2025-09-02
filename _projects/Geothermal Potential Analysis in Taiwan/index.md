@@ -29,7 +29,9 @@ main-image: /Schematic Single Flash.png
 ## Well E-201 (Single-flash, >260 degree celcius):
 - Net output: **197,088 MWh/year**
 - CO2 avoided is equivalent to **194,000 t/year** (assuming coal displacement)
+  
 <br>
+
 ## Well GT-19 (Binary Rankine with Isopentane):
 - Net output: **74.61 GWh/year**
 - CO2 avoided is equivalent to **61,180 t/year**
@@ -44,13 +46,15 @@ main-image: /Schematic Single Flash.png
 # Figures and Visualization
 ### Schematic of the Single Flash Geothermal Power Plant System
 {% include image-gallery.html images="/Schematic Single Flash.png" height="400" %}
+
 <br>
+
 ### Schematic of the Binary Cycle Geothermal Power Plant System
 {% include image-gallery.html images="/schematic-binarycycle.jpeg" height="400" %}
 
 # Python Code Single Flash Geothermal Plant Model
 ### Thermodynamic Points Modelling
-'''python
+```python
 import CoolProp.CoolProp as CP
 
 # Given Data
@@ -301,9 +305,9 @@ else:
 # plt.grid(True)
 # plt.show()
 '''
-
+```
 ###Creating the T-S Diagram
-'''python
+```python
 import CoolProp.CoolProp as CP
 
 # Given Data
@@ -505,5 +509,5 @@ plt.legend()
 plt.grid()
 plt.title("T-s Diagram of the Single Flash Geothermal Power Cycle")
 plt.show()
-'''
+```
 
