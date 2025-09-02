@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Optimal Design of a Hybrid PV-Battery-Diesel System for Reliable Energy Supply on Sipora Island
-description:  This MATLAB project implements a hybrid energy system optimizer that sizes solar PV panels, battery storage, and diesel backup generators to meet a given load profile at minimum cost.
-The code integrates time-series simulation, realistic dispatch logic, and genetic algorithm optimization, producing both numerical and graphical outputs.
+description:  This MATLAB project implements a hybrid energy system optimizer that sizes solar PV panels, battery storage, and diesel backup generators to meet a given load profile at minimum cost. The code integrates time-series simulation, realistic dispatch logic, and genetic algorithm optimization, producing both numerical and graphical outputs.
 
 skills: 
   - MATLAB Programming
