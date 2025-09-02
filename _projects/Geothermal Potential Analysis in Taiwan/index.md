@@ -40,6 +40,9 @@ main-image: /Schematic Single Flash.png
 - Main barriers: upfront drilling costs, technical risk, environmental safeguards.
 - Success depends on investment in advanced geothermal technology and supportive energy policy.
 
-# Topology
-
-
+# Figures and Visualization
+### Thermodynamic Points Topology of the Single Flash System
+{% include image-gallery.html images="/Schematic Single Flash.png" height="400" %}
+<br>
+### Thermodynamic Points of the Single Flash System
+{% include image-gallery.html images="/Schematic Single Flash.png" height="400" %}
