@@ -28,7 +28,8 @@ main-image: /Schematic Single Flash.png
 # Results
 ## Well E-201 (Single-flash, >260 degree celcius):
 - Net output: **197,088 MWh/year**
-- CO2 avoided is equivalent to **194,000 t/year** (assuming coal displacement)  
+- CO2 avoided is equivalent to **194,000 t/year** (assuming coal displacement)
+
 ## Well GT-19 (Binary Rankine with Isopentane):
 - Net output: **74.61 GWh/year**
 - CO2 avoided is equivalent to **61,180 t/year**
