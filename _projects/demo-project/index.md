@@ -98,7 +98,7 @@ You can put in multiple entries. All images will be at a fixed height in the sam
 -->
 
 ### Embeed images
-<img src="/diesel-pv-bat-topology Large.jpeg" alt="Load profile of the PV-Battery-Diesel topology" height="400">
+{%/diesel-pv-bat-topology Large.jpeg" height="400" %}
 
 
 ## Embedding youtube video
