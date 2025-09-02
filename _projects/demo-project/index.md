@@ -20,31 +20,29 @@ main-image: /diesel-pv-bat-topology Large.jpeg
 # Logic of the Code 
 <br>
 
-## 1. Input Processing
+## Input Processing
 -	Load, irradiance, and temperature are read from CSV.
 -	Converted into consistent units (W, Wh, °C).
-## 2. System Parameters
+## System Parameters
 -	Define PV, battery, diesel, and cost parameters.
 -	Establish GA decision vector: [Npv, Ncell, Ndiesel, SOC_ini].
-## 3.	Optimization Setup
+## Optimization Setup
 -	Objective = CAPEX + aggregated O&M + lifetime fuel cost + penalty for unmet load.
 -	Constraints = SOC bounds, no excessive unmet demand, diesel not exceeding nameplate.
-## 4.	Dispatch Simulation (per timestep)
+## Dispatch Simulation (per timestep)
 -	Surplus case: PV → charge battery (respecting SOC & efficiency) → curtail excess.
 -	Deficit case: Battery discharges → if still short, diesel supplies → if still short, unmet load recorded.
-## 5.	Genetic Algorithm
+## Genetic Algorithm
 -	GA searches for the cost-optimal mix of PV panels, battery cells, and diesel gensets.
 -	Integer constraints ensure physical realism (whole panels, whole gensets).
-## 6.	Post-Optimization Simulation
+## Post-Optimization Simulation
 -	Runs the system with the optimal configuration.
 -	Generates time-series of SOC, power flows, diesel use, and unmet load.
-## 7.	Visualization
+## Visualization
 -	Multi-panel plots show:
 -	Load vs PV vs Diesel.
 -	Battery charge/discharge cycles and curtailment.
 -	SOC trajectory.
--	Diesel share of demand.
--	(Optional) unmet load profile and percentages.
 
 # Key Assumptions
 ## Load data: 
@@ -54,10 +52,10 @@ Simplified one year of demand, temperature, and irradiance (288 timesteps = 12 m
 -	Battery: Defined by capacity per cell, SOC operating window (20%–90%).
 -	Charging/discharging efficiencies split for realism.
 -	Simple cycle aging approximation.
--	Diesel generators:
+## Diesel generators:
 1.	500 kW per unit.
 2.	Includes efficiency, fuel cost per liter, and O&M.
-- Economic assumptions:
+## Economic assumptions:
 1.	CAPEX per kW PV, per kWh battery, per genset.
 2.	O&M cost fractions over 25-year lifetime.
 3.	Fuel costs accumulated over system lifetime.
@@ -105,8 +103,8 @@ You can put in multiple entries. All images will be at a fixed height in the sam
 <br>
 ### Load Profile of The Simulated System
 {% include image-gallery.html images="/loadprofileoptimal.jpg" height="400"%}
-### System Performance
 <br> 
+### System Performance
 {% include image-gallery.html images="/resultgraphoptimal.jpg" height="400"%}
 
 # MATLAB Code
