@@ -43,10 +43,10 @@ main-image: /ssf.png
 
 # Figures and Visualization
 ### Schematic of the Single Flash Geothermal Power Plant System
-{% include image-gallery.html images="_projects/Geothermal Potential Analysis in Taiwan/schematicsingleflash.jpeg" height="400"%}
+![](/_projects/Geothermal%20Potential%20Analysis%20in%20Taiwan/schematicsingleflash.jpeg){:height="400px"}
 <br>
 ### Schematic of the Binary Cycle Geothermal Power Plant System
-{% include image-gallery.html images="/schematicbinary.jpeg" height="400" %}
+![](/_projects/Geothermal%20Potential%20Analysis%20in%20Taiwan/schematicbinary.jpeg){:height="400px"}
 <br>
 # Python Code Single Flash Geothermal Plant Model
 ### Thermodynamic Points Modelling
