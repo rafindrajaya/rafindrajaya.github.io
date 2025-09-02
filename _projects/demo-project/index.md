@@ -13,7 +13,7 @@ skills:
   - Techno-economic Analysis
   - Life-cycle Analysis
 
-main-image: _projects/demo-project/diesel-pv-bat-topology-medium.jpeg
+main-image: /diesel-pv-bat-topology Large.jpeg
 ---
 
 ---
