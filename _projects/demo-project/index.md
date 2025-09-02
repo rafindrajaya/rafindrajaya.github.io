@@ -18,6 +18,7 @@ main-image: /project2.jpg
 
 ---
 # Logic of the Code 
+<br>
 ## 1. Input Processing
 -	Load, irradiance, and temperature are read from CSV.
 -	Converted into consistent units (W, Wh, °C).
