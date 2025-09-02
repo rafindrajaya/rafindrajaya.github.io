@@ -45,4 +45,4 @@ main-image: /Schematic Single Flash.png
 {% include image-gallery.html images="/Schematic Single Flash.png" height="400" %}
 <br>
 ### Thermodynamic Points of the Single Flash System
-{% include image-gallery.html images="/Schematic Single Flash.png" height="400" %}
+{% include image-gallery.html images="/schematic-binarycycle.jpeg" height="400" %}
