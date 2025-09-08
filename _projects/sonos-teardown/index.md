@@ -49,32 +49,32 @@ To design and evaluate a zero-emission power system for Sipora Island (Indonesia
 - Positioned Sipora Island for potential hydrogen economy applications (domestic, transport, export).
 
 ### Optimal Sizing Results
-| Case | PV [kW] | 4hr1MWLi [#strings] | Converter [kW] | Fuel Cell [kW] | Electrolyzer [kW] | HTank [kg] | 
+| Case | PV [kW] | 4hr1MWLi [#strings] | Converter [kW] | Fuel Cell [kW] | Electrolyzer [kW] | HTank [kg] |
 |------|---------|---------------------|----------------|----------------|-------------------|------------|
-| 1 | 39,395 | 15 | 3,621 | NA | NA | NA | 
-| 2 | 23,282 | 7 | 3,440 | 1,500 | 4,500 | 3,621 | 
+| 1    | 39,395  | 15                  | 3,621          | –              | –                 | –          |
+| 2    | 23,282  | 7                   | 3,440          | 1,500          | 4,500             | 3,621      |
 
 ### Techno-economic Results
-| Properties | Original Case (DG Subsidized) | Original Case (DG Unsubsidized) | Case 1 (PV+LIBs) | Case 2 (PV+LIBs+P2H2P) |
-|------------|-------------------------------|---------------------------------|------------------|------------------------|
-| COE [USD/kWh] | 0.242 | 0.419 | 0.366 | 0.236 |
-| NPC [USD] | 59.5M | 103M | 89.9M | 57.9M |
-| CAPEX [USD] | 313,860 | 313,860 | 67.2M | 42.0M |
-| OPEX [USD/year] | 863,388 | 887,575 | 617,663 | 579,834 |
-| Fuel Cost [USD/year] | 2.6M | 5.16M | 0 | 0 |
-| Present worth [USD] | – | – | -30.4M or 13.1M | 1.6M or 45.1M |
-| Annual Worth [USD/year] | – | – | -1.8M or 780K | 95,192 or 2.7M |
-| Total electric production [kWh/year] | 14,622,630 | 14,622,630 | 55,493,756 | 33,488,798 |
-| RE fraction [%] | 0 | 0 | 100 | 100 |
-| Unmet load [%] | 0 | 0 | 0.0642 | 0.0566 |
-| Excess Electricity [kWh/year] | 0 | 0 | 39,228,299 | 15,370,860 |
-| Clipped Energy [%] | 0 | 0 | 70.7 | 45.9 |
-| Carbon Dioxide [kg/year] | 10,089,465 | 10,089,465 | 0 | 0 |
-| Carbon Monoxide [kg/year] | 53,725 | 53,725 | 0 | 0 |
-| Unburned Hydrocarbon [kg/year] | 2,795 | 2,795 | 0 | 0 |
-| Particulate Matter [kg/year] | 416 | 416 | 0 | 0 |
-| Sulfur Dioxide [kg/year] | 24,881 | 24,881 | 0 | 0 |
-| Nitrogen Oxides [kg/year] | 9,191 | 9,191 | 0 | 0 |
+| Properties                 | Original Case (DG Subsidized) | Original Case (DG Unsubsidized) | Case 1 (PV+LIBs) | Case 2 (PV+LIBs+P2H2P) |
+|-----------------------------|-------------------------------|---------------------------------|------------------|------------------------|
+| COE [USD/kWh]              | 0.242                         | 0.419                           | 0.366            | 0.236                  |
+| NPC [USD]                  | 59.5M                         | 103M                            | 89.9M            | 57.9M                  |
+| CAPEX [USD]                | 313,860                       | 313,860                         | 67.2M            | 42.0M                  |
+| OPEX [USD/year]            | 863,388                       | 887,575                         | 617,663          | 579,834                |
+| Fuel Cost [USD/year]       | 2.6M                          | 5.16M                           | 0                | 0                      |
+| Present worth [USD]        | –                             | –                               | -30.4M or 13.1M  | 1.6M or 45.1M          |
+| Annual Worth [USD/year]    | –                             | –                               | -1.8M or 780K    | 95,192 or 2.7M         |
+| Total electric production [kWh/year] | 14,622,630          | 14,622,630                      | 55,493,756       | 33,488,798             |
+| RE fraction [%]            | 0                             | 0                               | 100              | 100                    |
+| Unmet load [%]             | 0                             | 0                               | 0.0642           | 0.0566                 |
+| Excess Electricity [kWh/year] | 0                          | 0                               | 39,228,299       | 15,370,860             |
+| Clipped Energy [%]         | 0                             | 0                               | 70.7             | 45.9                   |
+| Carbon Dioxide [kg/year]   | 10,089,465                    | 10,089,465                      | 0                | 0                      |
+| Carbon Monoxide [kg/year]  | 53,725                        | 53,725                          | 0                | 0                      |
+| Unburned Hydrocarbon [kg/year] | 2,795                     | 2,795                           | 0                | 0                      |
+| Particulate Matter [kg/year] | 416                         | 416                             | 0                | 0                      |
+| Sulfur Dioxide [kg/year]   | 24,881                        | 24,881                          | 0                | 0                      |
+| Nitrogen Oxides [kg/year]  | 9,191                         | 9,191                           | 0                | 0                      |
 
 # Significance & Impact
 - Technical Expertise: Demonstrated advanced skills in energy system modeling, optimization, and techno-economic analysis using Homer Pro and hybrid storage design.
@@ -103,7 +103,7 @@ By integrating PV, batteries, and hydrogen storage, This thesis has demonstrated
 <br>
 
 ## PV+Battery (C1)
-### C1 Load Profile 
+### C1 Power System Performance 
 ![](/_projects/sonos-teardown/c1loadprofile.png){:height="400px"}
 <br>
 ### C1 SOC
@@ -111,7 +111,7 @@ By integrating PV, batteries, and hydrogen storage, This thesis has demonstrated
 <br>
 
 ## PV+Battery+P2H2P (C2)
-### C2 Load Profile
+### C2 Power System Performance
 ![](/_projects/sonos-teardown/c2loadprofile.png){:height="400px"}
 <br>
 ### C2 SOC
