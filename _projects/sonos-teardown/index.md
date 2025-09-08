@@ -11,6 +11,8 @@ skills:
 main-image: /mainvisual.png
 ---
 
+[Access Full Thesis Here](https://drive.google.com/file/d/10eAAsvA4vWQZu3rO20TLX8wdZaDJMmY2/view)
+
 **Institution**: Sophia University – TESLab (Prof. Masafumi Miyatake) <br>
 **Role**: Lead Researcher & Author <br>
 **Tools**: Homer Pro <br>
