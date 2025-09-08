@@ -49,12 +49,14 @@ To design and evaluate a zero-emission power system for Sipora Island (Indonesia
 - Positioned Sipora Island for potential hydrogen economy applications (domestic, transport, export).
 
 ### Optimal Sizing Results
+<br>
 | Case | PV [kW] | 4hr1MWLi [#strings] | Converter [kW] | Fuel Cell [kW] | Electrolyzer [kW] | HTank [kg] |
 |------|---------|---------------------|----------------|----------------|-------------------|------------|
 | 1    | 39,395  | 15                  | 3,621          | –              | –                 | –          |
 | 2    | 23,282  | 7                   | 3,440          | 1,500          | 4,500             | 3,621      |
 
 ### Techno-economic Results
+<br>
 | Properties                 | Original Case (DG Subsidized) | Original Case (DG Unsubsidized) | Case 1 (PV+LIBs) | Case 2 (PV+LIBs+P2H2P) |
 |-----------------------------|-------------------------------|---------------------------------|------------------|------------------------|
 | COE [USD/kWh]              | 0.242                         | 0.419                           | 0.366            | 0.236                  |
