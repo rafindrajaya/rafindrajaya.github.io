@@ -48,6 +48,13 @@ To design and evaluate a zero-emission power system for Sipora Island (Indonesia
 - Reduced wasted energy from 70.7% (C1) to 45.9%.
 - Positioned Sipora Island for potential hydrogen economy applications (domestic, transport, export).
 
+### Optimal Sizing Results
+| Case | PV [kW] | 4hr1MWLi [#strings] | Converter [kW] | Fuel Cell [kW] | Electrolyzer [kW] | HTank [kg] | 
+|------|---------|---------------------|----------------|----------------|-------------------|------------|
+| 1 | 39,395 | 15 | 3,621 | NA | NA | NA | 
+| 2 | 23,282 | 7 | 3,440 | 1,500 | 4,500 | 3,621 | 
+
+### Techno-economic Results
 | Properties | Original Case (DG Subsidized) | Original Case (DG Unsubsidized) | Case 1 (PV+LIBs) | Case 2 (PV+LIBs+P2H2P) |
 |------------|-------------------------------|---------------------------------|------------------|------------------------|
 | COE [USD/kWh] | 0.242 | 0.419 | 0.366 | 0.236 |
@@ -76,7 +83,7 @@ To design and evaluate a zero-emission power system for Sipora Island (Indonesia
 - Industry Relevance: Addresses real-world challenges of subsidy dependency, diesel price volatility, and emissions regulation, with actionable pathways for utilities and policymakers.
 
 # Key Takeaway
-By integrating PV, batteries, and hydrogen storage, I demonstrated that remote tropical islands can achieve 100% renewable, zero-emission power at lower cost than diesel, paving the way for sustainable microgrids and hydrogen society development.
+By integrating PV, batteries, and hydrogen storage, This thesis has demonstrated that remote tropical islands can achieve 100% renewable, zero-emission power at lower cost than diesel, paving the way for sustainable microgrids and hydrogen society development.
 
 # Key Figures
 ### 
