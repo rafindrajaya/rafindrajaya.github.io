@@ -9,7 +9,7 @@ skills:
   - hybrid storage optimization
   - Homer Pro
 
-main-image: /sonos.png
+main-image: /mainvisual.png
 ---
 
 **Institution**: Sophia University – TESLab (Prof. Masafumi Miyatake) <br>
