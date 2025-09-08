@@ -86,5 +86,43 @@ To design and evaluate a zero-emission power system for Sipora Island (Indonesia
 By integrating PV, batteries, and hydrogen storage, This thesis has demonstrated that remote tropical islands can achieve 100% renewable, zero-emission power at lower cost than diesel, paving the way for sustainable microgrids and hydrogen society development.
 
 # Key Figures
-### 
+## Sipora Island Parameters and Proposed Topology
+### Sipora Island Load Profile
+![](/_projects/sonos-teardown/loadprofile.png){:height="400px"}
+<br>
+### Solar Global Horizontal Irradiance & Temperature Data
+![](/_projects/sonos-teardown/ghi.png){:height="400px"}
+<br>
+![](/_projects/sonos-teardown/dailytemp.png){:height="400px"}
+<br>
+### Original Case Sizing
+![](/_projects/sonos-teardown/ocsizing.png){:height="400px"}
+<br>
+### Proposed Topology
+![](/_projects/sonos-teardown/mainvisual.png){:height="400px"}
+<br>
+
+## PV+Battery (C1)
+### C1 Load Profile 
+![](/_projects/sonos-teardown/c1loadprofile.png){:height="400px"}
+<br>
+### C1 SOC
+![](/_projects/sonos-teardown/c1soc.png){:height="400px"}
+<br>
+
+## PV+Battery+P2H2P (C2)
+### C2 Load Profile
+![](/_projects/sonos-teardown/c2loadprofile.png){:height="400px"}
+<br>
+### C2 SOC
+![](/_projects/sonos-teardown/c2SOC.png){:height="400px"}
+<br>
+### C2 FC Performance
+![](/_projects/sonos-teardown/c2fcperformance.png){:height="400px"}
+<br>
+
+
+
+
+
 
