@@ -1,7 +1,6 @@
 ---
 layout: post
-title: Implementation of Renewables-based Power-to-Hydrogen-to-Power System for
-Tropical Remote Island Stand-Alone Microgrids
+title: Implementation of Renewables-based Power-to-Hydrogen-to-Power System for Tropical Remote Island Stand-Alone Microgrids
 description: Designed and evaluated a renewables-based Power-to-Hydrogen-to-Power (P2H2P) microgrid for Sipora Island, Indonesia, using Homer Pro to compare diesel, PV-battery, and PV+Battery+Hydrogen systems. The study found that the PV+Battery+P2H2P configuration achieved the lowest cost of electricity (0.236 USD/kWh), zero emissions, and 4.5 days of energy autonomy, outperforming the diesel and battery-only systems both economically and environmentally. 
 skills: 
   - techno-economic modeling
