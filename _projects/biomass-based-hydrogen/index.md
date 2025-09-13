@@ -6,9 +6,8 @@ skills:
   - Comprative Analysis
   - Techno-economic Analysis
   - Critical Evaluation
-  - 
 
-main-image: 
+main-image: /1707632355407.jpeg
 ---
 
 [Access Full Thesis Here](https://drive.google.com/file/d/1UlOib3zgQU5GymZBW4fk76JIGSq00STx/view?usp=sharing)
