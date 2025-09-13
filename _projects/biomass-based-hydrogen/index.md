@@ -1,5 +1,16 @@
+---
+layout: post
+title: Assessment of Hydrogen Production from Biomass
+skills: 
+  - techno-economic modeling
+  - renewable integration
+  - hybrid storage optimization
+  - Homer Pro
 
+main-image: /mainvisual.png
+---
 
+[Access Full Thesis Here](https://drive.google.com/file/d/1UlOib3zgQU5GymZBW4fk76JIGSq00STx/view?usp=sharing)
 
 
 # 📘 Project Portfolio: Hydrogen Production from Biomass  
