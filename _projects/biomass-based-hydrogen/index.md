@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Assessment of Hydrogen Production from Biomass
+description: This project analyzed the potential of producing hydrogen from biomass as a sustainable alternative to fossil-based hydrogen. The report explored different process pathways (gasification, reforming, and hybrid systems), assessed energy efficiency, and conducted a techno-economic evaluation to estimate the levelized cost of hydrogen (LCOH). Findings highlighted the scalability of biomass-based hydrogen, its role in decarbonization, and the key challenges related to cost, feedstock availability, and process optimization.
 skills: 
   - Renewable Energy System
   - Comprative Analysis
