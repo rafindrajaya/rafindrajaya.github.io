@@ -94,6 +94,7 @@ Perfect foresight of load demand, PV availability, and EV connection schedules.
 <br>
 # Python Code
 ## Operational Planning Python Code
+
 ```python
 from param import delta_t
 from param import SOC_i_bss, SOC_min_bss, SOC_max_bss, eff_bss
@@ -276,6 +277,7 @@ model = create_model(results)
 run(model, results)
 
 ```
+
 <br>
 
 ## Optimal Sizing Python Code
