@@ -85,7 +85,7 @@ Perfect foresight of load demand, PV availability, and EV connection schedules.
 <br>
 
 ## October (Autumn)
-![](_projects/Microgrid Optimization and Sizing using Pyomo & Gurobi
+![](/_projects/Microgrid Optimization and Sizing using Pyomo & Gurobi
 /Screenshot 2025-10-01 at 10.29.08.png){:height="400px"}
 
 <br>
