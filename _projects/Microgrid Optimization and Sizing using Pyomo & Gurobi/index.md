@@ -8,7 +8,7 @@ skills:
   - Data handling
   - Techno-economic evaluation
 
-main-image: 
+main-image: /Flexgen-EV-charging.png
 ---
 
 # Objective
@@ -16,14 +16,14 @@ To develop an optimization framework for the operation and sizing of a microgrid
 
 # Methodology
 - Implemented two stages of optimization using Python, Pyomo, and the Gurobi solver:
-	1.	Operational Planning – optimized dispatch of PV, battery, EV, and generator to minimize daily operating costs.
-	2.	System Sizing – optimized capacity of PV, BSS, and generator to minimize lifecycle cost (CAPEX + OPEX) under realistic demand and generation profiles.
+1. Operational Planning – optimized dispatch of PV, battery, EV, and generator to minimize daily operating costs.
+2. System Sizing – optimized capacity of PV, BSS, and generator to minimize lifecycle cost (CAPEX + OPEX) under realistic demand and generation profiles.
 - Defined key variables (power import/export, SOC dynamics, charge/discharge rates) and formulated constraints covering:
-  1. Power balance
-  2. PV generation limits
-	3. Battery & EV state-of-charge dynamics
-	4. Generator & grid ramping limits (flicker reduction)
-	5. EV availability and target SOC requirements
+1. Power balance
+2. PV generation limits
+3. Battery & EV state-of-charge dynamics
+4. Generator & grid ramping limits (flicker reduction)
+5. EV availability and target SOC requirements
 - Objective functions included both economic terms (import/export price, generator cost, degradation cost) and system priorities (PV utilization, BSS prioritization, EV target SOC).
 
 # Assumptions
@@ -62,44 +62,27 @@ Perfect foresight of load demand, PV availability, and EV connection schedules.
 - EV charging strategies must balance user requirements with system efficiency.
 - Optimization frameworks using Pyomo + Gurobi are powerful tools for real-world energy system planning and can be scaled to different contexts (islands, rural electrification, smart grids).
 
-<!--
+
 # Key Figures
-## Sipora Island Parameters and Proposed Topology
-### Sipora Island Load Profile
-![](/_projects/sonos-teardown/loadprofile.png){:height="400px"}
+## Power System Performance
+### January (Winter)
+![](/_projects/Microgrid Optimization and Sizing using Pyomo & Gurobi
+/Screenshot 2025-10-01 at 10.26.46.png){:height="400px"}
 <br>
-### Solar Global Horizontal Irradiance & Temperature Data
-![](/_projects/sonos-teardown/ghi.png){:height="400px"}
+- Moderate PV availability leads to partial reliance on battery discharge and some grid import. The objective function prioritizes battery usage, resulting in reduced operational costs.
 <br>
-![](/_projects/sonos-teardown/dailytemp.png){:height="400px"}
+### June (Summer)
+![](/_projects/Microgrid Optimization and Sizing using Pyomo & Gurobi
+/Screenshot 2025-10-01 at 10.28.34.png){:height="400px"}
 <br>
-### Original Case Sizing
-![](/_projects/sonos-teardown/ocsizing.png){:height="400px"}
+- High solar irradiance enables complete self-sufficiency with zero imports and significant grid export. The battery and EV are charged efficiently, achieving the lowest operational cost
 <br>
-### Proposed Topology
-![](/_projects/sonos-teardown/mainvisual.png){:height="400px"}
+### October (Autumn)
+![](_projects/Microgrid Optimization and Sizing using Pyomo & Gurobi
+/Screenshot 2025-10-01 at 10.29.08.png){:height="400px"}
 <br>
-
-## PV+Battery (C1)
-### C1 Power System Performance 
-![](/_projects/sonos-teardown/c1loadprofile.png){:height="400px"}
+- Transitional weather results in lower PV output than summer, causing the system to rely on both battery discharge and grid import. The optimizer balances cost and availability.
 <br>
-### C1 SOC
-![](/_projects/sonos-teardown/c1soc.png){:height="400px"}
-<br>
-
-## PV+Battery+P2H2P (C2)
-### C2 Power System Performance
-![](/_projects/sonos-teardown/c2loadprofile.png){:height="400px"}
-<br>
-### C2 SOC
-![](/_projects/sonos-teardown/c2SOC.png){:height="400px"}
-<br>
-### C2 FC Performance
-![](/_projects/sonos-teardown/c2fcperformance.png){:height="400px"}
-<br>
-
--->
 
 
 
