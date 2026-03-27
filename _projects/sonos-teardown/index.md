@@ -54,7 +54,7 @@ To design and evaluate a zero-emission power system for Sipora Island (Indonesia
 | Case | PV [kW] | 4hr1MWLi [#strings] | Converter [kW] | Fuel Cell [kW] | Electrolyzer [kW] | HTank [kg] |
 |------|---------|---------------------|----------------|----------------|-------------------|------------|
 | 1    | 39,395  | 15                  | 3,621          | –              | –                 | –          |
-| 2    | 23,282  | 7                   | 3,440          | 1,500          | 4,500             | 3,621      |
+| 2    | 23,282  | 7                   | 3,621          | 3,440          | 1,500             | 4,500      |
 
 ## Techno-economic Results
 <br>
