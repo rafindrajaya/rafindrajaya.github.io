@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Japan Gas Supplier Network Map for SOFC Market Entry
-description: Architected an ETL pipeline in Python and Excel to aggregate and clean data from 200+ regional gas suppliers across Japan, then built an interactive choropleth network map using Folium to visualize supplier density by municipality. The analysis successfully identified 8 strategic biogas partners for Bosch's SOFC market entry strategy.
+description: Architected an ETL pipeline in Python and Excel to aggregate and clean data from 200+ regional gas suppliers across Japan, then built an interactive choropleth network map using Folium to visualize supplier density by municipality. The analysis successfully identified 8 strategic gas partners for Bosch's SOFC market entry strategy.
 skills:
   - Python (Folium, Pandas)
   - ETL Pipeline Design
