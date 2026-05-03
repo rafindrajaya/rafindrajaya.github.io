@@ -13,80 +13,78 @@ title: Rafi Indrajaya's Portfolio # This is what shows up in the tab of the brow
 
 # Hero Section
 name: Rafi Indrajaya
-headline: Clean Energy System Engineer
+headline: Energy Systems Optimization Engineer
 description: |
-  Hello there, welcome to my porfolio page! 
-  
+  Hello there, welcome to my portfolio page!
+
   <br>
-  
-  I’m a master’s student in the Erasmus Mundus Decentralized Smart Energy System (DENSYS) program, specializing in clean energy, hydrogen technologies, and sustainable power systems. 
-  With international experience spanning the mobility and power generation industries, I possess technical expertise in renewable energy integration, backed by strong analytical and modeling skills. 
-  I utilize tools such as Python (Pyomo, PyPSA, Pandas, Scikit-learn), MATLAB/Simulink, and Homer Pro to facilitate a smooth green transition without compromising profitability or grid integrity. 
-  My journey spans fuel cell & Electrolyzer technologies, geothermal power plant modeling, microgrid modeling and control systems, and Power-to-Hydrogen solutions — all driven by my passion for creating an innovative, sustainable energy future.
+
+  I'm a master's researcher at FEV Europe GmbH and a 2nd-year Erasmus Mundus DENSYS student at Politecnico di Torino, specializing in energy system optimization, AI/ML, and Power-to-X technologies.
+  With 2+ years of industry experience across Germany, Japan, and Indonesia, I build optimization frameworks and data pipelines for complex energy systems — from hybrid biomass Power-to-Methanol plants to residential microgrids.
+  I work primarily in Python (Pyomo, PyPSA, oemof, Scikit-learn, Gymnasium) and apply MILP, agentic AI, and Bayesian optimization to solve real-world sizing and dispatch problems.
+  My work spans fuel cells, geothermal systems, PV microgrids, and hydrogen/methanol production — all driven by a passion for making the energy transition technically rigorous and economically viable.
 
 
 # Place your profile image in /assets/images/profile-image/folder and edit the file name
 profile_image: assets/images/profile-image/DSC08446-large.jpeg
 
 # Link your resume
-# You can place your resume in assets/resume/{resume.pdf or add external link such as pdf saved in google drive 
-resume-url: /assets/Rafi_Indrajaya_CV.pdf
+# You can place your resume in assets/resume/{resume.pdf or add external link such as pdf saved in google drive
+resume-url: /assets/Rafi_Indrajaya_CV_0526.pdf
 
 
 # Set up external links - this will show up as small icons next to your name.
 
 external-links:    # input only your own url slug. The icons with missing entries will not appear.
-  linkedin: www.linkedin.com/in/rafi-indrajaya    # https://www.linkedin.com/in/{your url slug} 
-  #github:     # https://github.com/{your url slug} 
+  linkedin: www.linkedin.com/in/rafi-indrajaya    # https://www.linkedin.com/in/{your url slug}
+  #github:     # https://github.com/{your url slug}
   #stackoverflow:       # https://stackoverflow.com/users/{your url slug}
-  #medium:            # https://medium.com/@{your url slug} 
-  #x-twitter:   # https://x.com/{your url slug} 
-  #threads:            # https://threads.net/@{your url slug} 
-  #instragram:       # https://instagram.com/{your url slug} 
-  #youtube:           # https://youtube.com/@{your url slug} 
-  #discord:            # https://discord.com/users/{your url slug} 
-  #bluesky:           # https://bsky.app/profile/{your url slug} 
-  
+  #medium:            # https://medium.com/@{your url slug}
+  #x-twitter:   # https://x.com/{your url slug}
+  #threads:            # https://threads.net/@{your url slug}
+  #instragram:       # https://instagram.com/{your url slug}
+  #youtube:           # https://youtube.com/@{your url slug}
+  #discord:            # https://discord.com/users/{your url slug}
+  #bluesky:           # https://bsky.app/profile/{your url slug}
 
-# Skills Section - Add the list of your Skills by categories/tools. The indentation for each level needs to be precise. 
+
+# Skills Section - Add the list of your Skills by categories/tools. The indentation for each level needs to be precise.
 skills:
-  - category: Programming Languages
+  - category: Optimization & AI
+    tools:
+    - MILP (Pyomo, oemof)
+    - Agentic AI (Gymnasium)
+    - Bayesian Optimization (Optuna)
+    - PyPSA
+    - Scikit-learn
+  - category: Programming & Data
     tools:
     - Python
     - SQL
-    - R
+    - Git
+    - Tableau
     - MATLAB
-  - category: Energy Systems Tools
+  - category: Process & Energy Tools
     tools:
+    - Aspen Plus
     - HOMER Pro
     - Simulink
-    - OpenModelica
-    - CoolProp
-  - category: Data Analysis & Visualization
-    tools:
-    - Tableau
-    - Power BI
-    - Pandas
-    - JSON
-    - Microsoft Office Suite
   - category: Energy Engineering Expertise
     tools:
-    - Energy Modelling
-    - Energy Analysis
-    - Hydrogen Production and Utilization
-    - Geothermal
-    - Power-To-X
+    - Energy System Optimization
+    - Power-to-X (Hydrogen, Methanol, Ammonia)
+    - Microgrid Design & Control
+    - Fuel Cells & Electrolyzers
     - Solar PV Systems
-    - Wind Power
-    - Carbob Capture, Utilization, and Storage (CCUS)
-    - Life Cycle Analysis (LCA)  
+    - Geothermal
+    - Life Cycle Analysis (LCA)
   - category: Languages
     tools:
     - Indonesian (Native)
-    - English (C1)
-    - German (B2)
+    - English (Fluent / IELTS 8.0)
+    - German (B2-C1)
     - Japanese (N3)
-    - France (A2)
+    - French (A2)
 
 
 # Contact Form Setup. Setup an account and copy over the key. When someone fills out the form, it will be received in your email.
@@ -94,7 +92,7 @@ formspree-key:   https://formspree.io/f/mqadkooo
 
 
 
-# Active theme (Updatethis to switch themes). Make sure to keep the indentation the samne.
+# Active theme (Update this to switch themes). Make sure to keep the indentation the same.
 colors: # this is the basic theme
   text: "#1a1c20"
   border: "#ddd"
@@ -103,7 +101,7 @@ colors: # this is the basic theme
   background: "#ffffff"
   light_background: "#f3f5fb"
 
-# A few examples. 
+# A few examples.
 #basic theme:
   #text: "#1a1c20"
   #border: "#ddd"
@@ -111,7 +109,7 @@ colors: # this is the basic theme
   #highlight: "#0c0cf2"
   #background: "#ffffff"
   #light_background: "#f3f5fb"
-  
+
 #mint theme:
   #text: "#2c3333"
   #border: "#e0f2ef"
@@ -119,16 +117,16 @@ colors: # this is the basic theme
   #highlight: "#2a9d8f"
   #background: "#f7fbfa"
   #light_background: "#f0f9f7"
-  
+
 #lemon theme:
- # text: "#2d2926"
+  #text: "#2d2926"
   #border: "#f7f3e3"
   #link: "#ffc94d"
   #highlight: "#ffb800"
   #background: "#fffdf5"
   #light_background: "#fff9e6"
-  
-  #pink theme:
+
+#pink theme:
   #text: "#2d2d2d"
   #border: "#f8e2e2"
   #link: "#ff8fa3"
