@@ -31,7 +31,7 @@ To simulate and analyze the transient thermal behavior of a well-mixed hot water
 
 ## System Description
 
-<cite index="4-2,4-3,4-4">A well-mixed hot water tank is a form of thermal energy storage with a uniform fluid temperature inside the tank, achieved by ensuring the contents are thoroughly mixed — either actively (via pump or agitator) or naturally through buoyancy-driven convection currents.</cite>
+A well-mixed hot water tank is a form of thermal energy storage with a uniform fluid temperature inside the tank, achieved by ensuring the contents are thoroughly mixed — either actively (via pump or agitator) or naturally through buoyancy-driven convection currents.
 
 The tank is a stainless steel cylindrical vessel with mineral wool insulation. Key parameters:
 
@@ -53,18 +53,18 @@ The tank is a stainless steel cylindrical vessel with mineral wool insulation. K
 
 ## Energy Balance Model
 
-<cite index="4-14">The fluid energy balance of the well-mixed hot water tank governs the temperature evolution.</cite> The discretized form used in the iteration is:
+The fluid energy balance governs the temperature evolution. The discretized form used in the iteration is:
 
 > T_F(t) = [ m_dot_s · cp · T_A_s + m_dot_L · cp · T_A_L + UA · T_ext + (ρ_f · V_f · cp / Δt) · T_F(t-1) ]
 >           / [ m_dot_s · cp + m_dot_L · cp + UA + ρ_f · V_f · cp / Δt ]
 
-<cite index="4-20,4-21">Since upper and lower heat losses are negligible, only the lateral area A_side is considered in the combined heat transfer coefficient UA:</cite>
+Since upper and lower heat losses are negligible, only the lateral area A_side is considered in the combined heat transfer coefficient UA:
 
 > UA = A_side / [ (1/α_int) · (D_te/D_ti) + (dt_ins / 2λ_ins) · ln(D_te/D_to) + (d_to / 2λ_metal) · ln(D_to/D_ti) + (1/α_ext) ]
 
 ## Energy Calculation
 
-<cite index="4-57,4-58,4-59">The energy extracted from the source and delivered to the load are obtained by expanding the integral into a discrete sum at each timestep Δt:</cite>
+The energy extracted from the source and delivered to the load are obtained by expanding the integral into a discrete sum at each timestep Δt:
 
 > Q_source,t = m_dot_source · cp · (T_source_inlet − T_fluid,t) · Δt  ← during charging
 
@@ -72,7 +72,7 @@ The tank is a stainless steel cylindrical vessel with mineral wool insulation. K
 
 ## Algorithm
 
-<cite index="4-32,4-33,4-34,4-35,4-36,4-37">Python was used to implement the algorithm. NumPy and Matplotlib handle data computation and visualization. All parameters are stored as variables, and arrays are pre-allocated to store iteration results. A for-loop iterates the energy balance at every Δt = 1 minute, with if-conditions switching between charging, discharging, simultaneous, and idle modes.</cite>
+Python was used to implement the algorithm. NumPy and Matplotlib handle data computation and visualization. All parameters are stored as variables, and arrays are pre-allocated to store iteration results. A for-loop iterates the energy balance at every Δt = 1 minute, with if-conditions switching between charging, discharging, simultaneous, and idle modes.
 
 ## Parametric Studies
 
@@ -97,51 +97,67 @@ Two parametric studies were conducted:
 
 ## Fluid Temperature Evolution
 
-<cite index="4-47,4-48,4-49,4-50,4-51,4-52,4-53,4-54,4-55">Four distinct phases are visible in each daily cycle:
+Four distinct phases are visible in each daily cycle:
 1. **Charging only** (08:00–13:00): fluid temperature rises toward source inlet temperature
 2. **Simultaneous charging + discharging** (13:00–16:00): cold load return flow enters, causing temperature to peak at 13:00 then drop
 3. **Discharging only** (16:00–24:00): temperature falls as hot fluid is extracted and cold return enters
 4. **Idle** (00:00–08:00): temperature decreases slowly due to lateral heat loss only
 
-This four-phase cycle repeats five times over the 5-day simulation.</cite>
+This four-phase cycle repeats five times over the 5-day simulation.
 
 ## Energy Results
 
-<cite index="4-63,4-64">Total energy extracted from the source over 5 days: **9,983.27 MJ**. Total energy delivered to the load: **9,253.50 MJ**. The difference is attributable to lateral heat loss through the tank wall and insulation — confirming that energy delivered to the load is always less than energy extracted from the source.</cite>
+Total energy extracted from the source over 5 days: **9,983.27 MJ**. Total energy delivered to the load: **9,253.50 MJ**. The difference is attributable to lateral heat loss through the tank wall and insulation — confirming that energy delivered to the load is always less than energy extracted from the source.
 
 > Thermal efficiency = Q_load / Q_source = 9,253.50 / 9,983.27 ≈ **92.7%**
 
 ## Parametric Study 1 — Source Inlet Temperature
 
-<cite index="4-68,4-69,4-72,4-73">Increasing the source inlet temperature leads to a proportional increase in fluid temperature. Both the energy extracted from the source and the energy delivered to the load increase linearly with inlet temperature — confirming that higher source temperature directly improves system output.</cite>
+Increasing the source inlet temperature leads to a proportional increase in fluid temperature. Both the energy extracted from the source and the energy delivered to the load increase linearly with inlet temperature — confirming that higher source temperature directly improves system output.
 
-| Source Inlet Temp (°C) | Q_source (MJ) | Q_load (MJ) |
-|------------------------|---------------|-------------|
-| 70 | ~7,000 | ~6,500 |
-| 80 | ~8,300 | ~7,700 |
-| 90 | ~9,983 | ~9,254 |
-| 100 | ~11,300 | ~10,500 |
-| 110 | ~12,800 | ~11,900 |
+![](/_projects/Dynamic Modelling of Water Thermal Energy Storage/temp_on_evolution.png){:height="400px"}
+
+<br>
+
+Fluid temperature evolution over 5 days for source inlet temperatures ranging from 70°C to 110°C. Higher inlet temperatures shift the entire temperature profile upward proportionally, with the peak temperature during each charging cycle increasing linearly. The shape and timing of the four daily phases remain unchanged — only the amplitude scales with inlet temperature.
+
+<br>
+
+![](/_projects/Dynamic Modelling of Water Thermal Energy Storage/parametric_temp.png){:height="400px"}
+
+<br>
+
+Linear increase in both Q_source and Q_load as source inlet temperature rises from 70°C to 110°C.
+
+<br>
 
 ## Parametric Study 2 — Source Mass Flow Rate
 
-<cite index="4-76,4-78,4-79,4-80,4-81,4-82">Increasing the source mass flow rate raises fluid temperature more noticeably during the charging phase, with less effect during discharging. The energy increase decelerates as mass flow rate approaches 1 kg/s, suggesting the system converges toward a maximum achievable energy at a specific flow rate limit.</cite>
+Increasing the source mass flow rate raises fluid temperature more noticeably during the charging phase, with less effect during discharging. The energy increase decelerates as mass flow rate approaches 1 kg/s, suggesting the system converges toward a maximum achievable energy at a specific flow rate limit.
 
-| Mass Flow Rate (kg/s) | Q_source (MJ) | Q_load (MJ) |
-|-----------------------|---------------|-------------|
-| 0.4 | ~8,500 | ~7,900 |
-| 0.5 | ~9,350 | ~8,650 |
-| 0.6 | ~9,983 | ~9,254 |
-| 0.7 | ~10,500 | ~9,700 |
-| 0.8 | ~10,900 | ~10,050 |
+![](/_projects/Dynamic Modelling of Water Thermal Energy Storage/mdot_on_evolution.png){:height="400px"}
+
+<br>
+
+Fluid temperature evolution over 5 days for source mass flow rates from 0.4 to 0.8 kg/s. The effect is most visible during the charging phase — higher flow rates deliver more thermal energy per unit time, raising the peak temperature faster. During discharging and idle phases the curves converge, as the load-side flow rate is unchanged. The spread between curves narrows at higher flow rates, consistent with the asymptotic energy trend.
+
+<br>
+
+![](/_projects/Dynamic Modelling of Water Thermal Energy Storage/parametric_mdot.png){:height="400px"}
+
+<br>
+
+Diminishing returns in energy gain as source mass flow rate increases from 0.4 to 0.8 kg/s, suggesting a convergence toward a maximum achievable energy.
+
+<br>
 
 ---
 
 # Significance & Impact
 
-- Demonstrates a complete **physics-based transient simulation pipeline** — from governing equations to discretized iteration to parametric optimization — using only Python.
+- Demonstrates a complete physics-based transient simulation pipeline — from governing equations to discretized iteration to parametric optimization — using only Python.
 - The 92.7% thermal efficiency result validates the insulation design and provides a quantitative baseline for comparing alternative tank configurations.
-- Parametric results directly inform **system design decisions**: inlet temperature has a linear, unbounded effect on output energy, while mass flow rate has a diminishing return — meaning there is an economically optimal flow rate beyond which additional pumping cost is not justified.
+- Parametric results directly inform system design decisions: inlet temperature has a linear, unbounded effect on output energy, while mass flow rate has a diminishing return — meaning there is an economically optimal flow rate beyond which additional pumping cost is not justified.
 - The model is directly extensible to stratified tank models, multi-tank configurations, or integration with solar thermal or heat pump systems.
 - Relevant to residential and district heating applications where hot water storage is used to decouple generation and demand.
 
@@ -150,7 +166,7 @@ This four-phase cycle repeats five times over the 5-day simulation.</cite>
 # Key Takeaway
 
 - A well-mixed tank model with lateral heat loss and time-varying charge/discharge schedules can be accurately simulated with a simple Euler discretization in Python.
-- <cite index="4-90,4-91">The fluid temperature evolution is dominated by the four operating phases (charging, simultaneous, discharging, idle). Parametric studies confirm a linear relationship for source inlet temperature and a proportional-with-limit relationship for source mass flow rate.</cite>
+- The fluid temperature evolution is dominated by the four operating phases (charging, simultaneous, discharging, idle). Parametric studies confirm a linear relationship for source inlet temperature and a proportional-with-limit relationship for source mass flow rate.
 - The gap between Q_source and Q_load (~7%) is entirely explained by lateral heat loss — a key design target for insulation optimization.
 - Timestep sensitivity is low at Δt = 1 min for this system scale, making the model computationally efficient for multi-day simulations.
 
@@ -159,39 +175,23 @@ This four-phase cycle repeats five times over the 5-day simulation.</cite>
 # Figures and Visualization
 
 ## Fluid Temperature Evolution (5 Days)
-{% include image-gallery.html images="/fluid_temp.png" height="400" %}
+
+![](/_projects/Dynamic Modelling of Water Thermal Energy Storage/fluid_temp.png){:height="400px"}
+
 <br>
+
 Five-day fluid temperature profile showing the four daily phases: charging (08:00–13:00), simultaneous charge-discharge (13:00–16:00), discharge only (16:00–24:00), and idle (00:00–08:00). Peak temperature ~78°C occurs at 13:00 each day.
+
 <br>
 
 ## Energy Extracted and Delivered Over Time
-{% include image-gallery.html images="/energy_plot.png" height="400" %}
-<br>
-Cumulative energy from source (orange) and to load (green) over 5 days. Total: 9,983 MJ extracted, 9,254 MJ delivered.
+
+![](/_projects/Dynamic Modelling of Water Thermal Energy Storage/energy_plot.png){:height="400px"}
+
 <br>
 
-## Parametric Study — Source Inlet Temperature Effect on Energy
-{% include image-gallery.html images="/parametric_temp.png" height="400" %}
-<br>
-Linear increase in both Q_source and Q_load as source inlet temperature rises from 70°C to 110°C.
-<br>
+Energy from source (orange) and to load (green) over 5 days. Total: 9,983 MJ extracted, 9,254 MJ delivered.
 
-## Parametric Study — Mass Flow Rate Effect on Energy
-{% include image-gallery.html images="/parametric_mdot.png" height="400" %}
-<br>
-Diminishing returns in energy gain as source mass flow rate increases from 0.4 to 0.8 kg/s, suggesting a convergence toward a maximum achievable energy.
-<br>
-
-## Parametric Study — Effect of Source Inlet Temperature on Fluid Temperature Evolution
-{% include image-gallery.html images="/temp_on_evolution.png" height="400" %}
-<br>
-Fluid temperature evolution over 5 days for source inlet temperatures ranging from 70°C to 110°C. Higher inlet temperatures shift the entire temperature profile upward proportionally, with the peak temperature during each charging cycle increasing linearly. The shape and timing of the four daily phases remain unchanged — only the amplitude scales with inlet temperature.
-<br>
-
-## Parametric Study — Effect of Mass Flow Rate on Fluid Temperature Evolution
-{% include image-gallery.html images="/mdot_on_evolution.png" height="400" %}
-<br>
-Fluid temperature evolution over 5 days for source mass flow rates from 0.4 to 0.8 kg/s. The effect is most visible during the charging phase — higher flow rates deliver more thermal energy per unit time, raising the peak temperature faster. During discharging and idle phases the curves converge, as the load-side flow rate is unchanged. The spread between curves narrows at higher flow rates, consistent with the asymptotic energy trend observed in the energy parametric study.
 <br>
 
 ---
@@ -257,17 +257,15 @@ Q_load   = np.zeros(total_time)
 for t in range(1, total_time):
     minute_of_day = t % (24 * 60)
 
-    # Determine active flows based on time of day
-    if discharging_start <= minute_of_day < charging_end:      # Both
+    if discharging_start <= minute_of_day < charging_end:      # Both charging and discharging
         m_s, m_L = m_dot_source, m_dot_load
-    elif charging_start <= minute_of_day < discharging_start:  # Charge only
+    elif charging_start <= minute_of_day < discharging_start:  # Charging only
         m_s, m_L = m_dot_source, 0
-    elif charging_end <= minute_of_day < discharging_end:      # Discharge only
+    elif charging_end <= minute_of_day < discharging_end:      # Discharging only
         m_s, m_L = 0, m_dot_load
     else:                                                       # Idle
         m_s, m_L = 0, 0
 
-    # Energy balance — solve for T_fluid[t]
     T_fluid[t] = (
         m_s * cp_fluid * T_source_inlet
         + m_L * cp_fluid * T_load_inlet
@@ -280,24 +278,20 @@ for t in range(1, total_time):
         + rho_water * V_tank * cp_fluid / delta_t
     )
 
-    # Energy accounting
     if charging_start <= minute_of_day < charging_end:
         Q_source[t] = m_dot_source * cp_fluid * (T_source_inlet - T_fluid[t]) * delta_t
     if discharging_start <= minute_of_day < discharging_end:
         Q_load[t] = m_dot_load * cp_fluid * (T_fluid[t] - T_load_inlet) * delta_t
 
-# ── Results ───────────────────────────────────────────────────────────────────
 print(f"Total Q_source: {np.sum(Q_source)/1e6:.2f} MJ")
 print(f"Total Q_load:   {np.sum(Q_load)/1e6:.2f} MJ")
 print(f"Efficiency:     {np.sum(Q_load)/np.sum(Q_source)*100:.1f}%")
 
-# ── Plots ─────────────────────────────────────────────────────────────────────
 time_h = np.arange(total_time) / 60
 
 plt.figure(figsize=(10, 4))
 plt.plot(time_h, T_fluid - 273.15, label="Fluid Temperature [°C]")
-plt.xlabel("Time [hours]")
-plt.ylabel("Temperature [°C]")
+plt.xlabel("Time [hours]"); plt.ylabel("Temperature [°C]")
 plt.title("Fluid Temperature Evolution in the Tank (5 Days)")
 plt.legend(); plt.grid(); plt.tight_layout(); plt.show()
 

@@ -183,7 +183,9 @@ Load events applied at: [0, 6, 6.01, 15, 15.01, 20, 20.01, 25, 25.01, 30] second
 # Figures and Visualization
 
 ## DC Microgrid — Lab 1 Simulation Results (FC + SC)
-{% include image-gallery.html images="/mainvisual.png" height="450" %}
+
+![](/_projects/Energy Management and Distributed Control of AC-DC Microgrids/mainvisual.png){:height="450px"}
+
 <br>
 Simulation scope output showing power flows (P_load, P_FC, P_SC), reference currents (iFCRef, iSCRef), power references vs actuals, and DC/SC/FC voltages. SC handles fast transients at t = 10s; FC ramps up slowly to restore SC energy.
 <br>

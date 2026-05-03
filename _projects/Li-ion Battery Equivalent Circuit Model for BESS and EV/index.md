@@ -135,7 +135,9 @@ Validation stop conditions halt the simulation when terminal voltage exceeds V_m
 # Figures and Visualization
 
 ## Simulink Model — Full ECM Overview
-{% include image-gallery.html images="/simulink_model.png" height="500" %}
+
+![](/_projects/Li-ion Battery Equivalent Circuit Model for BESS and EV/simulink_model.png){:height="500px"}
+
 <br>
 The full Simulink model showing the electrical subsystem (blue, dual RC network with charge/discharge switching and OCV LUT), SOC calculator (top left), and thermal subsystem (orange, lumped Newton cooling model). Validation stop conditions are visible on the right.
 <br>
