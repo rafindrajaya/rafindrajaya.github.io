@@ -20,7 +20,7 @@ main-image: /map_cover.png
 
 # Objective
 
-To support Bosch's SOFC market entry in Japan by identifying strategic biogas supply partners. The goal was to build a data pipeline that aggregates regional gas supplier information across Japan, geocodes it by municipality, and visualizes it as an interactive map — enabling the business team to identify high-density supplier regions and shortlist strategic partners for biogas-fed SOFC deployment.
+To support Bosch's SOFC market entry in Japan by identifying strategic gas supply partners. The goal was to build a data pipeline that aggregates regional gas supplier information across Japan, geocodes it by municipality, and visualizes it as an interactive map — enabling the business team to identify high-density supplier regions and shortlist strategic partners for natural gas-fed SOFC deployment.
 
 ---
 
@@ -50,7 +50,7 @@ The map is centered on Tokyo and exported as a standalone HTML file (`Interactiv
 # Assumptions
 
 - Administrative area codes in the CSV match the N03_007 field in the official GeoJSON boundary dataset
-- Supplier count per municipality is treated as a proxy for biogas availability and market accessibility
+- Supplier count per municipality is treated as a proxy for gas availability and market accessibility
 - Geographic coordinates (lat/lng) are pre-assigned per municipality centroid in the source data
 - Only municipalities present in the CSV are rendered — unmatched GeoJSON features are filtered out
 
@@ -59,9 +59,9 @@ The map is centered on Tokyo and exported as a standalone HTML file (`Interactiv
 # Results
 
 - Built a fully interactive map covering 200+ gas supplier records across Japanese municipalities
-- Choropleth visualization revealed clear geographic clustering of biogas supply density in specific prefectures
+- Choropleth visualization revealed clear geographic clustering of gas supply density in specific prefectures
 - Marker popups provided the business team with direct supplier name lookup per region
-- The analysis successfully identified **8 strategic partners** for SOFC market entry based on supplier density, geographic proximity to target deployment sites, and biogas availability
+- The analysis successfully identified **8 strategic partners** for SOFC market entry based on supplier density, geographic proximity to target deployment sites, and gas availability
 - The HTML output was shared directly with the Bosch SOFC project team as a decision-support tool
 
 ---
