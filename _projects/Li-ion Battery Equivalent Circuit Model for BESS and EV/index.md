@@ -11,7 +11,7 @@ skills:
 main-image: /simulink_model.png
 ---
 
-**Institution**: Université de Lorraine – DENSYS Master's Programme  
+**Institution**: Politecnico di Torino – DENSYS Master's Programme  
 **Role**: Modeler & Simulation Engineer  
 **Tools**: MATLAB/Simulink  
 
