@@ -129,21 +129,26 @@ State the main goal of the project clearly. What problem does it solve? What was
 # Key Figures
 ## Figure Group Title (e.g., System Performance)
 ### Individual Figure Title
-{% include image-gallery.html images="/image-filename.png" height="400" %}
+
+![](/_projects/Your Project Folder Name/image-filename.png){:height="400px"}
+
 <br>
-- Caption or brief description of what the figure shows.
+Caption or brief description of what the figure shows.
 <br>
 ```
 
-For multiple images in one row:
-```markdown
-{% include image-gallery.html images="/img1.png, /img2.png" height="400" %}
-```
-
-For inline image with height control:
+**This is the correct image syntax.** Always use the full project folder path:
 ```markdown
 ![](/_projects/Your Project Folder Name/image.png){:height="400px"}
 ```
+
+For multiple images side by side, place them on consecutive lines:
+```markdown
+![](/_projects/Your Project Folder Name/img1.png){:height="400px"}
+![](/_projects/Your Project Folder Name/img2.png){:height="400px"}
+```
+
+Do NOT use `{% include image-gallery.html %}` — it does not render correctly.
 
 ---
 
@@ -226,7 +231,9 @@ Summary of outcomes.
 # Key Figures
 ## Figure Section Title
 ### Figure Title
-{% include image-gallery.html images="/image.png" height="400" %}
+
+![](/_projects/Your Project Folder Name/image.png){:height="400px"}
+
 <br>
 Caption here.
 <br>
