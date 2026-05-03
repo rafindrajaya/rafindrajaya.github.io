@@ -40,11 +40,11 @@ The DC microgrid control strategy is based on **bandwidth separation** (hierarch
 3. **Outer loop** — Fuel cell regulates battery SOC. Responds to slow, sustained energy demands.
 4. **PV** — Treated as an uncontrolled intermittent source (MPPT tracked, not used for control).
 
-Each control loop implements a **second-order error dynamics** law:
+Each control loop implements a **second-order error dynamics** law, where the error ε_k for each source k must satisfy:
 
-$$\dot{\varepsilon}_k(t) + 2\xi_k\omega_k\varepsilon_k(t) + \omega_k^2 \int_0^t \varepsilon_k(\tau)d\tau = 0$$
+> ε̇_k(t) + 2·ξ_k·ω_k·ε_k(t) + ω_k² · ∫ε_k(τ)dτ = 0
 
-with the condition $\omega_k \gg \omega_{k+1}$ ensuring bandwidth separation between layers.
+with the condition **ω_k >> ω_(k+1)** ensuring bandwidth separation between layers. ξ_k is the damping ratio (0.7 for good transient behavior) and ω_k is the natural frequency of loop k.
 
 **Three lab configurations were simulated:**
 - **Lab 1**: Fuel Cell + Supercapacitor hybrid with current load
@@ -61,24 +61,34 @@ with the condition $\omega_k \gg \omega_{k+1}$ ensuring bandwidth separation bet
 The AC microgrid work focuses on a T-shaped cluster with two grid-forming DGs, progressing from classical droop control to enhanced reactive power sharing and secondary frequency/voltage restoration.
 
 **Classical Droop Control:**
-- Active power sharing via frequency: $\omega_i = \omega_0 - m_i(P_i - P_{in})$
-- Reactive power sharing via voltage: $V_i = V_0 - n_i(Q_i - Q_{in})$
-- Limitation: classical droop achieves equal active power sharing but **not** equal reactive power sharing due to mismatched line impedances.
+
+Active power sharing is achieved through frequency droop:
+
+> ω_i = ω_0 − m_i · (P_i − P_in)
+
+Reactive power sharing is achieved through voltage droop:
+
+> V_i = V_0 − n_i · (Q_i − Q_in)
+
+**Limitation:** classical droop achieves equal active power sharing but **not** equal reactive power sharing due to mismatched line impedances between DGs and the PCC.
 
 **Four enhanced reactive power sharing strategies were analyzed and simulated:**
 1. **Virtual Impedance Method** — Introduces artificial inductive impedance in the control loop to equalize effective output impedances across DGs.
 2. **Virtual Power Droop Control** — Redefines P and Q using a rotation matrix based on line impedance angle, compensating for network effects.
-3. **Non-linear Droop Coefficient Method** — Adds a time-varying decoupling term $J_i$ to the voltage droop equation to eliminate P-Q coupling.
-4. **Q-Vest Droop with PCC Voltage Estimation** — Estimates PCC RMS voltage from DG output measurements and feeds the error into an integrator to correct the voltage reference.
+3. **Non-linear Droop Coefficient Method** — Adds a time-varying decoupling term J_i to the voltage droop equation to eliminate P-Q coupling.
+4. **Q-Vest Droop with PCC Voltage Estimation** — Estimates PCC RMS voltage from DG output measurements and feeds the error into an integrator to correct the voltage reference. Steady-state condition:
+
+> K_v · (V_n − V_0_Est) = n_i · (Q_i − Q_in)
 
 **Secondary Control — Frequency Restoration (without communication network):**
-- A secondary control variable $X_{\omega i}$ is added to the P-F droop law.
+- A secondary control variable X_ωi is added to the P-F droop law: **ω_i = ω_n − m_i·(P_i − P_in) − X_ωi**
+- Its dynamics ensure all DG frequencies converge to nominal: **dX_ω/dt = −L·K1·X_ω + K2·(ω − ω_n·I2)**
 - DG1 acts as frequency leader; DG2 synchronizes via angular error comparison.
-- Result: all DG frequencies converge to nominal value (~20s settling time) while preserving active power sharing.
+- Result: all DG frequencies converge to nominal (~20s settling time) while preserving active power sharing.
 
 **Secondary Control — Voltage Restoration at PCC:**
-- A distributed consensus algorithm updates a voltage correction variable $X_v$ for each DG.
-- A second-order consensus loop synchronizes all DGs to apply the same correction.
+- A distributed consensus algorithm updates a voltage correction variable X_v for each DG: **dX_v/dt = −K_Pv·(E_n − X) + K_Iv·Y_v**
+- An auxiliary consensus loop synchronizes all DGs: **dY_v/dt = −L_w·X_v − f·Y_v**
 - Result: PCC voltage restored to 110V nominal; equal reactive power sharing preserved.
 
 **Inverter Modeling and Controller Design:**
@@ -95,8 +105,8 @@ The AC microgrid work focuses on a T-shaped cluster with two grid-forming DGs, p
 - AC microgrid network assumed inductive (typical for microgrids), enabling linearized P-Q decoupling.
 - Perfect knowledge of line impedance angles assumed for virtual power droop implementation.
 - PV generation treated as intermittent feedforward input — not used as a control source.
-- Damping ratio $\xi = 0.7$ used for better transient behavior across all second-order controllers.
-- Bandwidth condition: $\omega_0 < \omega_s / 10$ where $\omega_s$ is the switching pulsation.
+- Damping ratio ξ = 0.7 used for better transient behavior across all second-order controllers.
+- Bandwidth condition: ω_0 < ω_s / 10, where ω_s is the switching pulsation.
 
 ---
 
@@ -167,3 +177,13 @@ Load events applied at: [0, 6, 6.01, 15, 15.01, 20, 20.01, 25, 25.01, 30] second
 - Frequency and voltage can both be restored to nominal values using distributed consensus algorithms without a central controller, while preserving power sharing — a key enabler for resilient microgrids.
 - Grid-forming inverters establish the grid; grid-following inverters inject power into it — both are essential and complementary in modern power systems.
 - Average models enable fast, accurate simulation for control design without switching-level complexity, consistent with the energetic-based control design methodology.
+
+---
+
+# Figures and Visualization
+
+## DC Microgrid — Lab 1 Simulation Results (FC + SC)
+{% include image-gallery.html images="/mainvisual.png" height="450" %}
+<br>
+Simulation scope output showing power flows (P_load, P_FC, P_SC), reference currents (iFCRef, iSCRef), power references vs actuals, and DC/SC/FC voltages. SC handles fast transients at t = 10s; FC ramps up slowly to restore SC energy.
+<br>
