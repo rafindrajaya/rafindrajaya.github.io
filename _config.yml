@@ -52,8 +52,9 @@ external-links:    # input only your own url slug. The icons with missing entrie
 skills:
   - category: Optimization & AI
     tools:
-    - MILP (Pyomo, oemof)
-    - Agentic AI (Gymnasium)
+    - Pyomo
+    - Oemof
+    - Reinforcement Learning Agentic AI (Gymnasium)
     - Bayesian Optimization (Optuna)
     - PyPSA
     - Scikit-learn
@@ -93,13 +94,13 @@ formspree-key:   https://formspree.io/f/mqadkooo
 
 
 # Active theme (Update this to switch themes). Make sure to keep the indentation the same.
-colors: # this is the basic theme
-  text: "#1a1c20"
-  border: "#ddd"
-  link: "#4a76ee"
-  highlight: "#0c0cf2"
-  background: "#ffffff"
-  light_background: "#f3f5fb"
+colors: # mint theme
+  text: "#2c3333"
+  border: "#e0f2ef"
+  link: "#40b3a2"
+  highlight: "#2a9d8f"
+  background: "#f7fbfa"
+  light_background: "#f0f9f7"
 
 # A few examples.
 #basic theme:
